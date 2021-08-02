@@ -2,30 +2,16 @@
   <div>
     <img src="" alt="">
     <h2>Movimientos</h2>
-      <ul>
-        <li>{{movimientosLista}}</li>
-      </ul>
+      <p >{{movimientosLista}}</p>
     <h2>Habilidades</h2>
-    <ul>
-        <li>{{habilidadesLista}}</li>
-      </ul>
+      <p  >{{habilidadesLista}}</p>     
   </div>
 </template>
 
 <script>
 export default {
   name : 'PokeInfoSelect',
-  data: () => ({
-     personajes: [
-      {
-      nombre: '',
-      imagen: '',
-      movimientos: [],
-      habilidades : [],
-    }
-    ],
-      personaje : '',
-  }),
+ 
   props: {
     movimientosLista : {
       type: Array,

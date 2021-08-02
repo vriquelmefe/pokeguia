@@ -9,7 +9,18 @@ export default {
   components: {
     PokeInfoSelect
   },
-  data:  () => ({}),
+   data: () => ({
+     personajes:{
+      nombre:"",
+      movimiento:"",
+      movimientos:[],
+      habilidad:"",
+      habilidades:[],
+      sprites:{
+          front_default:"",
+      },
+    },
+  }),
   methods:{
     getApiPokemon(nombrePokemon){
       fetch(`https://pokeapi.co/api/v2/pokemon/${nombrePokemon}`)
@@ -18,7 +29,9 @@ export default {
         //  const datosPoke = data.results.url.filter(poke => poke.name === nombrePokemon);
         //  console.log(datosPoke.results)
       })
-      .catch((error) => console.log(error))
+      .catch(error => {
+        alert('Nombre invalido')
+        console.log(error)})
     },
     buscandoPokemon(){
       this.personajes.push({
@@ -29,15 +42,15 @@ export default {
     }
   },
   computed: {
-    // mounted(){
-    //   return {
-    //     personaje = 'pikachu',
-    //     fetchApiPokemon()
-    //   } 
-    // },
-  },
+    },
+  // mounted(){
+  //   return {
+  //     this.personajes.nombre = "pikachu",
+  //     this.getApiPokemon()
+  //   } 
+  // },
   created() {
-    this.getApiPokemon();
+    this.getApiPokemon;
   },
 
 }

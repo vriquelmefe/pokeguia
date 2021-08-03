@@ -1,6 +1,6 @@
 <template>
-  <div id="app">
-    <PokeInfo />
+  <div id="app" >
+    <PokeInfo title="PokeGuia"/>
   </div>
 </template>
 
@@ -22,5 +22,8 @@ export default {
   text-align: center;
   color: #02367a;
   margin-top: 60px;
+}
+html{
+  background-image: '@/assets/pokedex.jpg';
 }
 </style>
